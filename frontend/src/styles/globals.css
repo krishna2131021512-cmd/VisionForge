@@ -1,0 +1,268 @@
+/* ==========================================
+   Vision Forge - Global Styles
+========================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================
+   Google Font
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* ==========================================
+   Root Variables
+========================================== */
+
+:root {
+  --primary: #10b981;
+  --primary-dark: #059669;
+  --secondary: #3b82f6;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --success: #22c55e;
+
+  --background: #f8fafc;
+  --surface: #ffffff;
+
+  --text: #0f172a;
+  --text-light: #64748b;
+
+  --border: #e2e8f0;
+
+  --radius: 14px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.dark {
+  --background: #0f172a;
+  --surface: #1e293b;
+
+  --text: #f8fafc;
+  --text-light: #cbd5e1;
+
+  --border: #334155;
+}
+
+/* ==========================================
+   Base
+========================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+/* ==========================================
+   Text Selection
+========================================== */
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* ==========================================
+   Common Container
+========================================== */
+
+.container-custom {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* ==========================================
+   Cards
+========================================== */
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.btn-transition {
+  transition: 0.3s ease;
+}
+
+.btn-transition:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   Inputs
+========================================== */
+
+.input-focus {
+  transition: 0.3s;
+}
+
+.input-focus:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+}
+
+/* ==========================================
+   Utilities
+========================================== */
+
+.text-gradient {
+  background: linear-gradient(
+    90deg,
+    #10b981,
+    #3b82f6
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+}
+
+.dark .glass {
+  background: rgba(30, 41, 59, 0.75);
+}
+
+.shadow-custom {
+  box-shadow: var(--shadow-lg);
+}
+
+.rounded-custom {
+  border-radius: var(--radius);
+}
+
+/* ==========================================
+   Loading Spinner
+========================================== */
+
+.spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e5e7eb;
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================
+   Fade
+========================================== */
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+  .container-custom {
+    padding-inline: 0.8rem;
+  }
+}
