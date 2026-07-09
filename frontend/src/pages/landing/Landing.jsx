@@ -1,19 +1,19 @@
-import Hero from "../../components/landing/Hero";
-import Features from "../../components/landing/Features";
-import About from "../../components/landing/About";
-import Vision from "../../components/landing/Vision";
-import AIWorkflow from "../../components/landing/AIWorkflow";
-import HowItWorks from "../../components/landing/HowItWorks";
-import Statistics from "../../components/landing/Statistics";
-import Departments from "../../components/landing/Departments";
-import ComplaintCategories from "../../components/landing/ComplaintCategories";
-import Benefits from "../../components/landing/Benefits";
-import WhyChooseUs from "../../components/landing/WhyChooseUs";
-import Testimonials from "../../components/landing/Testimonials";
-import FAQ from "../../components/landing/FAQ";
-import Contact from "../../components/landing/Contact";
-import CTA from "../../components/landing/CTA";
-import Newsletter from "../../components/landing/Newsletter";
+import Hero from "./sections/Hero";
+import Features from "./sections/Features";
+import About from "./sections/About";
+import HowItWorks from "./sections/HowitWorks";
+import Benefits from "./sections/Benefits";
+import Departments from "./sections/Departments";
+import ComplaintCategories from "./sections/ComplaintCategories";
+import AIWorkflow from "./sections/AIWorkflow";
+import Statistics from "./sections/Statistics";
+import Testimonials from "./sections/Testimonials";
+import Vision from "./sections/Vision";
+import WhyChooseUs from "./sections/WhyChooseUs";
+import FAQ from "./sections/FAQ";
+import Contact from "./sections/Contact";
+import CTA from "./sections/CTA";
+import Newsletter from "./sections/Newsletter";
 
 const Landing = () => {
   return (
