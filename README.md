@@ -339,11 +339,10 @@ admin123
 
 Vision Forge Development Team
 
-- Frontend Developers
-- Backend Developers
-- AI/ML Engineers
-- UI/UX Designers
-- Database Engineers
+- Mekanath J
+- Krishna S
+- Ashwin Kumar A M
+- Nemalan L B
 
 ---
 
